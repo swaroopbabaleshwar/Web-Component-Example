@@ -30,7 +30,7 @@ export class StockPrice {
     }
 
 
-    // Welcome to Alpha Vantage! Your API key is: 4NJGRL1919WERDK0. Please record this API key at a safe place for future data access.
+    // Welcome to Alpha Vantage! Your API key is: . Please record this API key at a safe place for future data access.
 
     constructor() { }
 
