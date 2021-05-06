@@ -1,0 +1,46 @@
+:host {
+    display: block;
+    font-family: sans-serif;
+    border: 2px solid rgb(73, 0, 73);
+    margin: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    max-width: 100%;
+}
+:host(.error) {
+    border: 2px solid orange;
+}
+
+form input {
+    font: inherit;
+    color: purple;
+    padding: 0.1rem 0.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+}
+
+form button {
+    font: inherit;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid purple;
+    color: white;
+    background: purple;
+    cursor: pointer;
+}
+form button:hover,
+form button:active {
+    background: rgb(216, 13, 216);
+    border-color: purple;
+}
+
+
+/* button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    border-color: #ccc;
+} */

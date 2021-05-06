@@ -1,0 +1,94 @@
+aside {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 30rem;
+    max-width: 80%;
+    height: 100vh;
+    background: rgb(241, 241, 241);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: left 0.3s ease-out;
+    z-index: 100;
+}
+
+/* host will work only with a shadow DOM */
+:host([opened]) aside {
+    left: 0;
+}
+header {
+    padding: 0.5rem;
+    background: black;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+ 
+header button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 1rem;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header button:focus {
+    outline: none;
+}
+
+#tabs {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+#tabs button {
+    width: 30%;
+    background: transparent;
+    color: black;
+    text-align: center;
+    font: inherit;
+    padding: 0.35rem 0;
+    border: 1px solid black;
+}
+
+#tabs button.active,
+#tabs button:hover,
+#tabs button:active {
+    background: black;
+    color: white;
+}
+
+#tabs button:focus {
+    outline: none;
+}
+
+#contact-info {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+}
+:host([opened]) .backdrop {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
